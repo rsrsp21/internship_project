@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Endava Movies</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="loading-screen">
+            <img src="endava_movies.png" alt="Endava Movies Logo" class="loading-logo">
+        </div>
+
+        <div class="main-content" style="display: none;">
+            <header class="header">
+                <div class="logo"><img src="endava_movies.png"  style="height: 40px;"></div>
+                <label class="hamburger" for="menu-toggle">☰</label>
+                <input type="checkbox" id="menu-toggle">
+                <nav class="nav">
+                    <a href="#">Home</a>
+                    <a href="#">TV Shows</a>
+                    <a href="#">Movies</a>
+                    <a href="#">My List</a>
+                    <a href="#login-modal" class="nav-btn">Login</a>
+                    <a href="#signup-modal" class="nav-btn">Sign Up</a>
+                </nav>
+            </header>
+
+            <div class="hero-container"></div>
+            <button id="prev-btn" class="control-btn">&#10094;</button>
+            <button id="next-btn" class="control-btn">&#10095;</button>
+
+            <section class="content-row">
+                <h2 class="row-title">Trending Now</h2>
+                <div class="movie-scroll">
+                    <div class="movie-card">
+                        <img src="breaking_bad_poster.jpg" alt="Movie 1">
+                    </div>
+                    <div class="movie-card">
+                        <img src="inception_poster.webp" alt="Movie 2">
+                    </div>
+                    <div class="movie-card">
+                        <img src="stranger_things_poster.jpg" alt="Movie 3">
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-row">
+                <h2 class="row-title">Popular on Endava Movies</h2>
+                <div class="movie-scroll">
+                    <div class="movie-card">
+                        <img src="lucky_baskhar_poster.jpg" alt="Lucky Baskhar">
+                    </div>
+                    <div class="movie-card">
+                        <img src="breaking_bad_poster.jpg" alt="Breaking Bad">
+                    </div>
+                    <div class="movie-card">
+                        <img src="inception_poster.webp" alt="Inception">
+                    </div>
+                </div>
+            </section>
+            <div style="margin-bottom: 60px;"></div>
+
+            <div id="login-modal" class="modal">
+                <div class="modal-content">
+                    <a href="#" class="close">×</a>
+                    <h2>Login</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="login-email">Email</label>
+                            <input type="email" id="login-email" placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="login-password">Password</label>
+                            <input type="password" id="login-password" placeholder="Enter your password">
+                        </div>
+                        <button type="submit" class="modal-btn">Login</button>
+                    </form>
+                </div>
+            </div>
+
+            <div id="signup-modal" class="modal">
+                <div class="modal-content">
+                    <a href="#" class="close">×</a>
+                    <h2>Sign Up</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="signup-email">Email</label>
+                            <input type="email" id="signup-email" placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-password">Password</label>
+                            <input type="password" id="signup-password" placeholder="Create a password">
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-confirm">Confirm Password</label>
+                            <input type="password" id="signup-confirm" placeholder="Confirm your password">
+                        </div>
+                        <button type="submit" class="modal-btn">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+            <footer class="footer">
+                <div>&copy; Endava Movies 2025</div>
+                <div><a href="https://endava.com" target="_blank"><span><img src="endava_logo.png" style="height: 20px;"></span></a></div>
+            </footer>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
