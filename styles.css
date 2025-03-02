@@ -228,7 +228,7 @@ body {
     gap: 20px;
     overflow-x: auto; 
     overflow-y: hidden;
-    padding: 20px 0 20px 20px;
+    padding: 20px 20px 20px 20px;
     scrollbar-width: thin; 
     scrollbar-color: #007bff transparent; 
     scroll-behavior: smooth;
