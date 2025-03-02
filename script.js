@@ -1,10 +1,10 @@
 window.onload = function() {
     const loadingScreen = document.querySelector('.loading-screen');
     const mainContent = document.querySelector('.main-content');
-    const sound = new Audio('load_sound.wav');
+    //const sound = new Audio('load_sound.wav');
 
     setTimeout(() => {
-        sound.play();
+        //sound.play();
         loadingScreen.style.animation = 'zoomIn 2s ease-out forwards';
 
         setTimeout(() => {
