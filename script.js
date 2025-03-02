@@ -34,6 +34,8 @@ const movies = [
 ];
 
 let currentMovieIndex = 0;
+let startX = 0;
+let endX = 0; 
 
 function createHeroSections() {
     const heroContainer = document.querySelector('.hero-container');
@@ -68,6 +70,26 @@ function createHeroSections() {
             heroSection.classList.add('active');
         }
     });
+
+    heroContainer.addEventListener('touchstart', handleTouchStart);
+    heroContainer.addEventListener('touchend', handleTouchEnd);
+}
+
+function handleTouchStart(e) {
+    startX = e.touches[0].clientX;
+}
+
+function handleTouchEnd(e) {
+    endX = e.changedTouches[0].clientX;
+    const difference = startX - endX;
+
+    if (difference > 50) {
+        // Swipe Left (Next Movie)
+        nextMovie();
+    } else if (difference < -50) {
+        // Swipe Right (Previous Movie)
+        prevMovie();
+    }
 }
 
 function updateHeroContent(index) {
@@ -80,13 +102,10 @@ function updateHeroContent(index) {
     });
 }
 
-
 function nextMovie() {
-    currentMovieIndex = (currentMovieIndex + 1) % movies.length;  
+    currentMovieIndex = (currentMovieIndex + 1) % movies.length;
     updateHeroContent(currentMovieIndex);
 }
-
-
 
 function prevMovie() {
     currentMovieIndex = (currentMovieIndex - 1 + movies.length) % movies.length;
@@ -95,7 +114,6 @@ function prevMovie() {
 
 createHeroSections();
 updateHeroContent(currentMovieIndex);
-
 
 document.getElementById('prev-btn').addEventListener('click', prevMovie);
 document.getElementById('next-btn').addEventListener('click', nextMovie);
