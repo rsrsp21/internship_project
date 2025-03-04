@@ -84,10 +84,8 @@ function handleTouchEnd(e) {
     const difference = startX - endX;
 
     if (difference > 50) {
-        // Swipe Left (Next Movie)
         nextMovie();
     } else if (difference < -50) {
-        // Swipe Right (Previous Movie)
         prevMovie();
     }
 }
